@@ -16,4 +16,6 @@ dependencies {
     compile(libraries."spring-boot-starter-web")
     
     compile(libraries."spring-cloud-starter-openfeign")
+
+    compile(libraries."swagger-ui")
 }

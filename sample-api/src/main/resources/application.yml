@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+---
+
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:oracle:thin:@//35.221.231.158:1521/pdborcl
+    username: LY3KT
+    password: LY3KT20190304
+
+---
+
+spring:
+  profiles: k8s
+  datasource:
+    url: jdbc:oracle:thin:@//35.221.231.158:1521/pdborcl
+    username: LY3KT
+    password: LY3KT20190304

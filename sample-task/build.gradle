@@ -28,4 +28,6 @@ dependencies {
     compile(project(":sample-api-interface"))
 
     compile(libraries."spring-boot-starter-web")
+    
+    compile(libraries."lombok")
 }
