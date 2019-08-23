@@ -14,7 +14,7 @@ public class ItemController implements ItemApi {
     private ItemService itemService;
 
     @Override
-    public ResponseEntity<String> parse() {
+    public ResponseEntity<String> parse() throws Exception {
         return itemService.parse();
     }
 

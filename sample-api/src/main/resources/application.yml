@@ -1,13 +1,4 @@
 spring:
-  profiles:
-    active: local
-  jpa:
-    hibernate:
-      ddl-auto: update
-
----
-
-spring:
   profiles: local
   redis:
     host: 127.0.0.1

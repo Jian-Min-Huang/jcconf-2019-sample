@@ -25,6 +25,8 @@ repositories {
 }
 
 dependencies {
+    compile files("libs/ojdbc7-12.1.0.1.jar")
+
     compile(project(":sample-api-interface"))
 
     compile(libraries."spring-boot-starter-web")

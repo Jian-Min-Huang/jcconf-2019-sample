@@ -1,0 +1,14 @@
+spring:
+  profiles: local
+  redis:
+    host: 127.0.0.1
+host:
+  sample:
+    api: 127.0.0.1
+
+---
+
+spring:
+  profiles: k8s
+  redis:
+    host: 127.0.0.1

@@ -1,5 +1,6 @@
 package org.yfr.api.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.TextNode;
@@ -11,8 +12,10 @@ import org.yfr.api.data.entity.Item;
 import org.yfr.api.service.ItemService;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.time.LocalDateTime;
 
+@Slf4j
 @Service
 public class ItemServiceImpl implements ItemService {
 
@@ -20,22 +23,21 @@ public class ItemServiceImpl implements ItemService {
     private ItemRepository itemRepository;
 
     @Override
-    public ResponseEntity<String> parse() throws RuntimeException {
-        return null;
-    }
-
-    public static void main(String[] args) throws Exception {
+    public ResponseEntity<String> parse() throws Exception {
         Document doc = Jsoup.connect("https://www.wantgoo.com/global/stockindex?StockNo=0000").get();
         Elements price = doc.select(".price");
 
         Item item = Item.builder()
                 .code("0000")
-                .name("加權指數")
-                .date(LocalDateTime.now())
+                .title("加權指數")
+                .createTime(LocalDateTime.now())
                 .price(Float.parseFloat(((TextNode) price.get(0).childNodes().get(0)).text()))
                 .build();
 
-        System.out.println(item.toString());
+        Item save = itemRepository.save(item);
+        log.info("save {}", save.toString());
+
+        return ResponseEntity.ok(save.toString());
     }
 
 }

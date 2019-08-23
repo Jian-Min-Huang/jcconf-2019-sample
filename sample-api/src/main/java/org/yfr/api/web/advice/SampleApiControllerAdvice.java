@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class SampleApiControllerAdvice {
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity runtimeExceptionHandler(RuntimeException ex) {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity runtimeExceptionHandler(Exception ex) {
         log.error(ex.getMessage(), ex);
 
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), HttpStatus.INTERNAL_SERVER_ERROR);

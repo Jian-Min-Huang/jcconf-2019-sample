@@ -2,10 +2,12 @@ package org.yfr.web.api;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 
-@FeignClient(name = "FourPartyFundApi", url = "${ly3kt.game.host}")
+@FeignClient(name = "ItemApi", url = "${host.sample.api}")
 public interface ItemApi {
 
-    ResponseEntity<String> parse();
+    @PostMapping("/item")
+    ResponseEntity<String> parse() throws Exception;
 
 }

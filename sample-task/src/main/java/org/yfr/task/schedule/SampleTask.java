@@ -17,9 +17,13 @@ public class SampleTask {
 
     @Scheduled(cron = "0 */1 * * * *")
     public void parseItem() {
-        ResponseEntity<String> response = itemApi.parse();
+        try {
+            ResponseEntity<String> response = itemApi.parse();
 
-        log.info("{}, {}", response.getStatusCode(), response.getBody());
+            log.info("{}, {}", response.getStatusCode(), response.getBody());
+        } catch (Exception ex) {
+            log.error(ex.getMessage(), ex);
+        }
     }
 
 }
