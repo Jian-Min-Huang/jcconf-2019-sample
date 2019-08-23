@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1521:1521
+  redis:
+    image: sameersbn/redis:4.0.9-3
+    ports:
+      - 6379:6379

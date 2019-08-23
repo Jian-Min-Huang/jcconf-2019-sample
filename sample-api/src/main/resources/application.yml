@@ -9,16 +9,20 @@ spring:
 
 spring:
   profiles: local
+  redis:
+    host: 127.0.0.1
   datasource:
-    url: jdbc:oracle:thin:@//35.221.231.158:1521/pdborcl
-    username: LY3KT
-    password: LY3KT20190304
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: system
+    password: oracle
 
 ---
 
 spring:
   profiles: k8s
+  redis:
+    host: 127.0.0.1
   datasource:
-    url: jdbc:oracle:thin:@//35.221.231.158:1521/pdborcl
-    username: LY3KT
-    password: LY3KT20190304
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: system
+    password: oracle

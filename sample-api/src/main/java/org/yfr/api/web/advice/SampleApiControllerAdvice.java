@@ -12,7 +12,9 @@ public class SampleApiControllerAdvice {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity runtimeExceptionHandler(RuntimeException ex) {
-        return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        log.error(ex.getMessage(), ex);
+
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
 }
