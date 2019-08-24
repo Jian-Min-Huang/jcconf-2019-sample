@@ -4,7 +4,7 @@ spring:
     host: 127.0.0.1
 host:
   sample:
-    api: 127.0.0.1
+    api: "127.0.0.1:9527"
 
 ---
 
@@ -12,3 +12,6 @@ spring:
   profiles: k8s
   redis:
     host: 127.0.0.1
+host:
+  sample:
+    api: "sample-api"
