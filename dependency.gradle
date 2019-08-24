@@ -6,6 +6,7 @@ ext.versions = [
         lombok         : "1.16.18",
         swagger        : "2.8.0",
         jsoup          : "1.12.1",
+        gradleDocker   : "1.2",
 ]
 
 ext.libraries = [

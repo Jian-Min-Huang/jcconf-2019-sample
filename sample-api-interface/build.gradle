@@ -1,5 +1,7 @@
-apply plugin: "java"
-apply plugin: "maven"
+plugins {
+    id 'java'
+    id 'maven'
+}
 
 group = "org.yfr"
 version = "0.0.1"
@@ -8,8 +10,6 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    mavenLocal()
-    maven { url "https://repo.spring.io/milestone" }
 }
 
 dependencies {
