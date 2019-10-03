@@ -11,7 +11,7 @@ host:
 spring:
   profiles: k8s
   redis:
-    host: 127.0.0.1
+    host: 34.80.108.151
 host:
   sample:
     api: "sample-api"

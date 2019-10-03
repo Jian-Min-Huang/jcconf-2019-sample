@@ -5,7 +5,7 @@ services:
     image: jianminhuang/sample-task:latest
     environment:
       - TZ=Asia/Taipei
-      - activeProfiles=dev
+      - activeProfiles=local
     networks:
       - default
   sample-api:
@@ -16,7 +16,7 @@ services:
       - 9527:9527
     environment:
       - TZ=Asia/Taipei
-      - activeProfiles=dev
+      - activeProfiles=local
     networks:
       - default
   redis:

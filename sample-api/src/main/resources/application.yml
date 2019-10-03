@@ -12,8 +12,8 @@ spring:
 spring:
   profiles: k8s
   redis:
-    host: 127.0.0.1
+    host: 34.80.108.151
   datasource:
-    url: jdbc:oracle:thin:@//localhost:1521/xe
+    url: jdbc:oracle:thin:@//34.80.108.151:1521/xe
     username: system
     password: oracle
