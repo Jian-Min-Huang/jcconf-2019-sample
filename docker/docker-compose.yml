@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  sample-task:
+    image: jianminhuang/sample-task:latest
+    environment:
+      - TZ=Asia/Taipei
+      - activeProfiles=dev
+    networks:
+      - default
+  sample-api:
+    image: jianminhuang/sample-api:latest
+    expose:
+      - 9527
+    ports:
+      - 9527:9527
+    environment:
+      - TZ=Asia/Taipei
+      - activeProfiles=dev
+    networks:
+      - default
+  redis:
+    image: sameersbn/redis:4.0.9-3
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    networks:
+      - default
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    expose:
+      - 1521
+    ports:
+      - 1521:1521
+    networks:
+      - default
+
+networks:
+  default:
