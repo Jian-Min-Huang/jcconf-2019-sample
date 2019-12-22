@@ -12,7 +12,6 @@ import org.yfr.api.data.entity.Item;
 import org.yfr.api.service.ItemService;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.time.LocalDateTime;
 
 @Slf4j
@@ -37,6 +36,11 @@ public class ItemServiceImpl implements ItemService {
         log.info("save {}", save.toString());
 
         return ResponseEntity.ok(save.toString());
+    }
+
+    @Override
+    public ResponseEntity<String> findByCode(String code) throws Exception {
+        return ResponseEntity.ok("api ver.1 -> " + itemRepository.findFirst3ByCodeOrderByIdDesc(code).toString());
     }
 
 }

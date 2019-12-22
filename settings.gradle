@@ -3,4 +3,5 @@ rootProject.name = 'jcconf-2019-sample'
 include 'sample-task'
 include 'sample-api'
 include 'sample-api-interface'
+include 'sample-web'
 

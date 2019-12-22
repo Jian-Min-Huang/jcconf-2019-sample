@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.yfr.web.api.ItemApi;
+import org.yfr.api.ItemApi;
 
 import javax.annotation.Resource;
 

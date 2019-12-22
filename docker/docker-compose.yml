@@ -37,14 +37,14 @@ services:
       - 3306:3306
     networks:
       - default
-  oracle:
-    image: oracleinanutshell/oracle-xe-11g:latest
-    expose:
-      - 1521
-    ports:
-      - 1521:1521
-    networks:
-      - default
+#  oracle:
+#    image: oracleinanutshell/oracle-xe-11g:latest
+#    expose:
+#      - 1521
+#    ports:
+#      - 1521:1521
+#    networks:
+#      - default
 
 networks:
   default:

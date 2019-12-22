@@ -1,0 +1,13 @@
+spring:
+  profiles: local
+host:
+  sample:
+    api: "127.0.0.1:9527"
+
+---
+
+spring:
+  profiles: k8s
+host:
+  sample:
+    api: "sample-api"

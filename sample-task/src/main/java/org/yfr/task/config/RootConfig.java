@@ -10,6 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
         "org.yfr"})
 @EnableScheduling
 @EnableFeignClients(basePackages = {
-        "org.yfr.web.api"})
+        "org.yfr.api"})
 public class RootConfig {
 }

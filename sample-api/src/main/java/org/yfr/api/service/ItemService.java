@@ -8,4 +8,5 @@ public interface ItemService {
 
     ResponseEntity<String> parse() throws Exception;
 
+    ResponseEntity<String> findByCode(String code) throws Exception;
 }
