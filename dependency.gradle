@@ -6,6 +6,7 @@ ext.versions = [
         lombok         : "1.16.18",
         swagger        : "2.8.0",
         jsoup          : "1.12.1",
+        mysql          : "5.1.48",
         gradleDocker   : "1.2",
 ]
 
@@ -23,4 +24,6 @@ ext.libraries = [
         "swagger-ui"                    : "io.springfox:springfox-swagger-ui:${versions.swagger}",
 
         "jsoup"                         : "org.jsoup:jsoup:${versions.jsoup}",
+
+        "mysql"                         : "mysql:mysql-connector-java:${versions.mysql}",
 ]

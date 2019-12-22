@@ -42,6 +42,8 @@ dependencies {
     compile(libraries."lombok")
 
     compile(libraries."swagger-ui")
+
+    compile(libraries."mysql")
 }
 
 task buildDocker(type: Docker) {

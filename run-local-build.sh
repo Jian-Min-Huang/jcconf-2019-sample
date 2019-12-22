@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 semanticVersion=0.0.1
-serial=$(date +"%Y%m%d%H%M")
-version=$semanticVersion.$serial
+version=$semanticVersion
 
 ./gradlew sample-api-interface:clean
 ./gradlew sample-api:clean

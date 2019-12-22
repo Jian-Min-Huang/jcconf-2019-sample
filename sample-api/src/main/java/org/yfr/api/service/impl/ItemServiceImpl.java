@@ -29,7 +29,6 @@ public class ItemServiceImpl implements ItemService {
 
         Item item = Item.builder()
                 .code("0000")
-                .title("加權指數")
                 .createTime(LocalDateTime.now())
                 .price(Float.parseFloat(((TextNode) price.get(0).childNodes().get(0)).text()))
                 .build();

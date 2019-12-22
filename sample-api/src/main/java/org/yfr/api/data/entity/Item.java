@@ -31,8 +31,6 @@ public class Item implements Serializable {
 
     private String code;
 
-    private String title;
-
     private LocalDateTime createTime;
 
     private Float price;
