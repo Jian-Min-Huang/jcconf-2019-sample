@@ -40,7 +40,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ResponseEntity<String> findByCode(String code) throws Exception {
-        return ResponseEntity.ok("api ver.1 -> " + itemRepository.findFirst3ByCodeOrderByIdDesc(code).toString());
+        return ResponseEntity.ok("api ver.2 -> " + itemRepository.findFirst3ByCodeOrderByIdDesc(code).toString());
     }
 
 }

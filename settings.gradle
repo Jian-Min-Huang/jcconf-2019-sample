@@ -4,4 +4,5 @@ include 'sample-task'
 include 'sample-api'
 include 'sample-api-interface'
 include 'sample-web'
+include 'sample-gw'
 

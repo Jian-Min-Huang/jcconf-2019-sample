@@ -1,0 +1,13 @@
+spring:
+  profiles: local
+host:
+  sample:
+    web: "http://127.0.0.1:9999"
+
+---
+
+spring:
+  profiles: k8s
+host:
+  sample:
+    web: "http://sample-web"
