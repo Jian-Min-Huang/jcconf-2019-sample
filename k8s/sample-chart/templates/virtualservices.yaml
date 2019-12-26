@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: sample
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - sample-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /item
+    route:
+    - destination:
+        host: sample-gw
+        port:
+          number: 80

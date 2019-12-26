@@ -1,0 +1,61 @@
+{{ $activeProfiles := .Values.activeProfiles }}
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sample-gw-{{ $activeProfiles }}
+    service: sample-gw-{{ $activeProfiles }}
+  name: sample-gw
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9001
+  selector:
+    app: sample-gw-{{ $activeProfiles }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sample-web-{{ $activeProfiles }}
+    service: sample-web-{{ $activeProfiles }}
+  name: sample-web
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9999
+  selector:
+    app: sample-web-{{ $activeProfiles }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sample-api-{{ $activeProfiles }}
+    service: sample-api-{{ $activeProfiles }}
+  name: sample-api
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9527
+  selector:
+    app: sample-api-{{ $activeProfiles }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sample-task-{{ $activeProfiles }}
+    service: sample-task-{{ $activeProfiles }}
+  name: sample-task
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9987
+  selector:
+    app: sample-task-{{ $activeProfiles }}

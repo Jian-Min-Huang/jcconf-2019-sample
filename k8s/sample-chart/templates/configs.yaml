@@ -1,0 +1,41 @@
+{{ $activeProfiles := .Values.activeProfiles }}
+
+apiVersion: v1
+data:
+  TZ: Asia/Taipei
+  activeProfiles: {{ $activeProfiles }}
+kind: ConfigMap
+metadata:
+  labels:
+    app: sample-gw-{{ $activeProfiles }}
+  name: sample-gw-config
+---
+apiVersion: v1
+data:
+  TZ: Asia/Taipei
+  activeProfiles: {{ $activeProfiles }}
+kind: ConfigMap
+metadata:
+  labels:
+    app: sample-web-{{ $activeProfiles }}
+  name: sample-web-config
+---
+apiVersion: v1
+data:
+  TZ: Asia/Taipei
+  activeProfiles: {{ $activeProfiles }}
+kind: ConfigMap
+metadata:
+  labels:
+    app: sample-api-{{ $activeProfiles }}
+  name: sample-api-config
+---
+apiVersion: v1
+data:
+  TZ: Asia/Taipei
+  activeProfiles: {{ $activeProfiles }}
+kind: ConfigMap
+metadata:
+  labels:
+    app: sample-task-{{ $activeProfiles }}
+  name: sample-task-config

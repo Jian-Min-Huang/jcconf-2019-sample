@@ -16,7 +16,7 @@ public class ItemController {
 
     @GetMapping("/item")
     ResponseEntity<String> findByCode(@RequestParam("code") String code) throws Exception {
-        return ResponseEntity.ok("web ver.2 -> " + itemApi.findByCode(code).getBody());
+        return ResponseEntity.ok("web ver.1 -> " + itemApi.findByCode(code).getBody());
     }
 
 }

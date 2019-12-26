@@ -1,0 +1,141 @@
+{{ $activeProfiles := .Values.activeProfiles }}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-gw-{{ $activeProfiles }}-v1
+  labels:
+    app: sample-gw-{{ $activeProfiles }}
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-gw-{{ $activeProfiles }}
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: sample-gw-{{ $activeProfiles }}
+        version: v1
+    spec:
+      containers:
+        - name: sample-gw
+          env:
+            - name: TZ
+              valueFrom:
+                configMapKeyRef:
+                  key: TZ
+                  name: sample-gw-config
+            - name: activeProfiles
+              valueFrom:
+                configMapKeyRef:
+                  key: activeProfiles
+                  name: sample-gw-config
+          image: jcconf-2019-sample/sample-gw:0.0.1
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-web-{{ $activeProfiles }}-v1
+  labels:
+    app: sample-web-{{ $activeProfiles }}
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-web-{{ $activeProfiles }}
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: sample-web-{{ $activeProfiles }}
+        version: v1
+    spec:
+      containers:
+        - name: sample-web
+          env:
+            - name: TZ
+              valueFrom:
+                configMapKeyRef:
+                  key: TZ
+                  name: sample-web-config
+            - name: activeProfiles
+              valueFrom:
+                configMapKeyRef:
+                  key: activeProfiles
+                  name: sample-web-config
+          image: jcconf-2019-sample/sample-web:0.0.1
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-api-{{ $activeProfiles }}-v1
+  labels:
+    app: sample-api-{{ $activeProfiles }}
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-api-{{ $activeProfiles }}
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: sample-api-{{ $activeProfiles }}
+        version: v1
+    spec:
+      containers:
+        - name: sample-api
+          env:
+            - name: TZ
+              valueFrom:
+                configMapKeyRef:
+                  key: TZ
+                  name: sample-api-config
+            - name: activeProfiles
+              valueFrom:
+                configMapKeyRef:
+                  key: activeProfiles
+                  name: sample-api-config
+          image: jcconf-2019-sample/sample-api:0.0.1
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-task-{{ $activeProfiles }}-v1
+  labels:
+    app: sample-task-{{ $activeProfiles }}
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-task-{{ $activeProfiles }}
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: sample-task-{{ $activeProfiles }}
+        version: v1
+    spec:
+      containers:
+        - name: sample-task
+          env:
+            - name: TZ
+              valueFrom:
+                configMapKeyRef:
+                  key: TZ
+                  name: sample-task-config
+            - name: activeProfiles
+              valueFrom:
+                configMapKeyRef:
+                  key: activeProfiles
+                  name: sample-task-config
+          image: jcconf-2019-sample/sample-task:0.0.1
+          imagePullPolicy: IfNotPresent

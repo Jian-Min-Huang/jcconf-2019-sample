@@ -1,0 +1,685 @@
+ 2816  brew install minikube
+ 2817  minikube start --memory=8192 --cpus=2
+ 2818  minikube kubectl
+ 2819  kubectl cluster-info
+ 2820  curl -L https://istio.io/downloadIstio | sh -
+ 2821  cd ~
+ 2822  cd Downloads
+ 2823  curl -L https://istio.io/downloadIstio | sh -
+ 2824  cd istio-1.4.2
+ 2825  ls
+ 2826  pwd
+ 2827  vi ~/.zshrc
+ 2828  pwd
+ 2829  vi ~/.zshrc
+ 2830  source ~/.zshrc
+ 2831  istioctl -help
+ 2832  istioctl --help
+ 2833  istioctl manifest apply --set profile=demo
+ 2834  kubectl get svc
+ 2835  kubectl get svc -all
+ 2836  kubectl get svc -A
+ 2837  kubectl label namespace default istio-injection=enabled
+ 2838  cd ~
+ 2839  ls
+ 2840  brew install kubernetes-helm
+ 2841  helm init --service-account tiller
+ 2842  helm helm init --service-account tiller
+ 2843  helm init --service-account tiller
+ 2844  helm init --upgrade --service-account tiller
+ 2845  kubectl --namespace kube-system get pods | grep tiller\n
+ 2846  helm --version
+ 2847  helm -v
+ 2848  helm -version
+ 2849  helm -h
+ 2850  helm version
+ 2851  brew uninstall kubernetes-helm
+ 2852  brew install kubernetes-helm@2
+ 2853  brew install helm@2
+ 2854  helm
+ 2855  helm version
+ 2856  helm2 version
+ 2857  where helm
+ 2858  brew install helm@2
+ 2859  cd /usr/local/bin
+ 2860  ls
+ 2861  brew link --force helm@2
+ 2862  helm version
+ 2863  helm init --service-account tiller
+ 2864  helm init --upgrade --service-account tiller
+ 2865  kubectl --namespace kube-system get pods | grep tiller
+ 2866  kubectl --namespace kube-system get pods
+ 2867  helm install stable/redis
+ 2868  helm version
+ 2869  kubectl -n kube-system get deployments
+ 2870  helm init --service-account tiller
+ 2871  cd ~
+ 2872  helm version
+ 2873  helm init
+ 2874  helm init --upgrade
+ 2875  helm version
+ 2876  helm version --tls --tiller-namespace tiller-controller
+ 2877  brew uninstall helm@2
+ 2878  vi ~/.zshrc
+ 2879  minikube dashboard
+ 2880  ls
+ 2881  vim sample.yaml
+ 2882  kubectl version
+ 2883  curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+ 2884  chmod 700 get_helm.sh
+ 2885  ./get_helm.sh
+ 2886  helm init --service-account tiller
+ 2887  helm init --upgrade --service-account tiller
+ 2888  kubectl --namespace kube-system get pods | grep tiller
+ 2889  rm -rf .helm
+ 2890  helm init --service-account tiller
+ 2891  kubectl --namespace kube-system get pods | grep tiller
+ 2892  kubectl --namespace kube-system get pods
+ 2893  helm version
+ 2894  kubectl get all --all-namespaces | grep tiller
+ 2895  kubectl delete deployment tiller-deploy -n kube-system
+ 2896  kubectl delete service tiller-deploy -n kube-system
+ 2897  kubectl get all --all-namespaces | grep tiller
+ 2898  helm init --service-account tiller
+ 2899  helm version
+ 2900  kubectl get all --all-namespaces | grep tiller
+ 2901  kubectl delete deployment tiller-deploy -n kube-system
+ 2902  kubectl delete service tiller-deploy -n kube-system
+ 2903  kubectl get all --all-namespaces | grep tiller
+ 2904  helm init
+ 2905  kubectl create serviceaccount --namespace kube-system tiller
+ 2906  kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+ 2907  kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+ 2908  helm version
+ 2909  docker-compose stop
+ 2910  docker-compose rm -f
+ 2911  helm install stable/redis
+ 2912  kubectl get pods -A
+ 2913  kubectl get svc
+ 2914  helm install --name mysql stable/mysql
+ 2915  helm list
+ 2916  helm delete --purge calling-waterbuffalo
+ 2917  helm install --name mysql stable/redis
+ 2918  helm install --name redis stable/redis
+ 2919  kubectl get secret --namespace default redis -o jsonpath="{.data.redis-password}" | base64 --decode
+ 2920  kubectl get secret --namespace default mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
+ 2921  docker-compose up -d mysql
+ 2922  helm delete --purge mysql
+ 2923  helm install --name mysql stable/mysql
+ 2924  kubectl get secret --namespace default mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
+ 2925  kubectl port-forward svc/mysql 3306
+ 2926  kubectl port-forward svc/mysql 3305
+ 2927  kubectl port-forward svc/mysql 3305:3306
+ 2928  ls
+ 2929  rm -f get_helm.sh
+ 2930  rm sample.yaml
+ 2931  ls
+ 2932  cd ~/GitHub
+ 2933  ls
+ 2934  cd ark-platform
+ 2935  ls
+ 2936  cd ..
+ 2937  ls
+ 2938  cd xts-platkorm
+ 2939  ls
+ 2940  cd miscellaneous
+ 2941  ls
+ 2942  cd helm/sit/ls
+ 2943  cd ..
+ 2944  ls
+ 2945  cd he
+ 2946  cd miscellaneous
+ 2947  ls
+ 2948  cd helm
+ 2949  ls
+ 2950  cp -r prod ~
+ 2951  cd ~
+ 2952  ls
+ 2953  mv prod sample
+ 2954  cd sample
+ 2955  ls
+ 2956  rm *.yaml
+ 2957  ls
+ 2958  mv xts-chart ../sample-chart
+ 2959  cd .
+ 2960  cd ..
+ 2961  ls
+ 2962  rm -rf sample
+ 2963  cd sample-chart
+ 2964  ls
+ 2965  vi Chart.yaml
+ 2966  vim values.yaml
+ 2967  cd templates
+ 2968  lllllls
+ 2969  ls
+ 2970  cd ..
+ 2971  ls
+ 2972  cd charts
+ 2973  ls
+ 2974  cd ..
+ 2975  ls
+ 2976  cd templates
+ 2977  ls
+ 2978  docker-compose stop
+ 2979  docker-compose rm -f
+ 2980  cd ..
+ 2981  ls
+ 2982  sh run-local-build.sh
+ 2983  vi configs.yaml
+ 2984  vi NOTES.txt
+ 2985  vi _helpers.tpl
+ 2986  rm _helpers.tpl
+ 2987  ls
+ 2988  vi ../values.yaml
+ 2989  ls
+ 2990  vi configs.yaml
+ 2991  vi deployments.yaml
+ 2992  ls
+ 2993  vi configs.yaml
+ 2994  vi deployments.yaml
+ 2995  vi configs.yaml
+ 2996  vi deployments.yaml
+ 2997  vi configs.yaml
+ 2998  vi deployments.yaml
+ 2999  sh run-local-build.sh
+ 3000  ls
+ 3001  vi services.yaml
+ 3002  vi ~/GitHub/ark-platform/miscellaneous/helm/prod/noah-ark-chart/values.yaml
+ 3003  vi services.yaml
+ 3004  ls
+ 3005  cd ..
+ 3006  ls
+ 3007  vi values.yaml
+ 3008  ls
+ 3009  helm install .
+ 3010  ls
+ 3011  cd templates
+ 3012  ls
+ 3013  vi deployments.yaml
+ 3014  helm install .
+ 3015  cd ..
+ 3016  ls
+ 3017  helm install .
+ 3018  vi templates/deployments.yaml
+ 3019  helm install .
+ 3020  vi templates/deployments.yaml
+ 3021  helm install .
+ 3022  vi templates/deployments.yaml
+ 3023  helm install .
+ 3024  vi templates/deployments.yaml
+ 3025  helm install .
+ 3026  vi templates/deployments.yaml
+ 3027  helm install .
+ 3028  vi templates/deployments.yaml
+ 3029  helm install .
+ 3030  vi templates/deployments.yaml
+ 3031  helm install .
+ 3032  vi templates/deployments.yaml
+ 3033  helm install .
+ 3034  vi templates/deployments.yaml
+ 3035  helm install .
+ 3036  helm install --dry-run --debug
+ 3037  helm install --dry-run --debug .
+ 3038  vi templates/deployments.yaml
+ 3039  helm install --dry-run --debug .
+ 3040  helm install .
+ 3041  helm list
+ 3042  helm delete --purge alternating-quetzal
+ 3043  helm install .
+ 3044  helm delete --purge nomadic-albatross
+ 3045  helm install --name=sample .
+ 3046  helm list
+ 3047  kubectl get svc
+ 3048  ls
+ 3049  cd templates
+ 3050  ls
+ 3051  mv deployments.yaml ~
+ 3052  mv services.yaml ~
+ 3053  cd ..
+ 3054  helm delete --purge sample
+ 3055  helm install --name=sample .
+ 3056  ls
+ 3057  mv ../deployments.yaml templates
+ 3058  mv ../services.yaml templates
+ 3059  ls
+ 3060  vi templates/deployments.yaml
+ 3061  vi ~/GitHub/xts-platkorm/miscellaneous/helm/prod/xts-chart/templates/deployments.yaml
+ 3062  vi templates/deployments.yaml
+ 3063  vi templates/services.yaml
+ 3064  vi ~/GitHub/xts-platkorm/miscellaneous/helm/prod/xts-chart/templates/services.yaml
+ 3065  vi templates/deployments.yaml
+ 3066  vi templates/configs.yaml
+ 3067  vi templates/deployments.yaml
+ 3068  vi templates/services.yaml
+ 3069  helm upgrade sample .
+ 3070  vi templates/services.yaml
+ 3071  vi templates/deployments.yaml
+ 3072  vi templates/configs.yaml
+ 3073  helm upgrade sample .
+ 3074  vi templates/deployments.yaml
+ 3075  vi ~/GitHub/xts-platkorm/miscellaneous/helm/prod/xts-chart/templates/configs.yaml
+ 3076  vi templates/configs.yaml
+ 3077  vi templates/services.yaml
+ 3078  helm upgrade sample .
+ 3079  vi templates/deployments.yaml
+ 3080  helm upgrade sample .
+ 3081  helm delete --purge sample
+ 3082  helm install --name=sample .
+ 3083  kubectl get svc
+ 3084  vi templates/deployments.yaml
+ 3085  vi templates/configs.yaml
+ 3086  vi templates/services.yaml
+ 3087  helm upgrade sample .
+ 3088  kubectl get pods 
+ 3089  sh run-local-build.sh
+ 3090  kubectl get pods 
+ 3091  cd ~/Dropbox/7_vincent.huang@xteamstudio.com
+ 3092  ls
+ 3093  cd common-note
+ 3094  ls
+ 3095  cd DevOps
+ 3096  ls
+ 3097  cd Kubenates
+ 3098  ls
+ 3099  vi KubernatesNote.md
+ 3100  vi deployment.yaml
+ 3101  vim KubernatesNote.md
+ 3102  vi temp.txt
+ 3103  kubectl get pods 
+ 3104  kubectl exec -it sample-api-76bf9d76cb-gtbtq bash
+ 3105  kubectl logs sample-api-76bf9d76cb-gtbtq
+ 3106  kubectl logs sample-api
+ 3107  kubectl get pods 
+ 3108  kubectl logs sample-api-76bf9d76cb-gtbtq
+ 3109  ls
+ 3110  istioctl manifest apply --set values.grafana.enabled=true
+ 3111  kubectl -n istio-system get svc prometheus
+ 3112  kubectl -n istio-system get svc grafana
+ 3113  kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000
+ 3114  istioctl manifest apply --set values.tracing.enabled=true
+ 3115  istioctl dashboard jaeger
+ 3116  cd ~
+ 3117  ls
+ 3118  vi gateway.yaml
+ 3119  kubectl apply -f gateway.yaml
+ 3120  kubectl get gateway
+ 3121  kubectl get svc istio-ingressgateway -n istio-system
+ 3122  export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+ 3123  export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].nodePort}')
+ 3124  export INGRESS_HOST=$(minikube ip)
+ 3125  export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+ 3126  echo $GATEWAY_URL
+ 3127  vi gateway.yaml
+ 3128  kubectl apply -f gateway.yaml
+ 3129  cd ~
+ 3130  istioctl dashboard jaeger
+ 3131  kubectl get destinationrule
+ 3132  vi ~/.zshrc
+ 3133  ls
+ 3134  cd doc
+ 3135  cd ..
+ 3136  ls
+ 3137  cd docker
+ 3138  ls
+ 3139  cd ~
+ 3140  ls
+ 3141  cd ~/GitHub/xts-platkorm
+ 3142  ls
+ 3143  cd xts-gw
+ 3144  ls
+ 3145  vi build.gradle
+ 3146  docker-compose up -d
+ 3147  docker-compose stop oracle
+ 3148  docker-compose rm -f oracle
+ 3149  docker-compose stop
+ 3150  docker-compose rm -f 
+ 3151  cd ..
+ 3152  sh run-local-build.sh
+ 3153  ls
+ 3154  cd ~/GitHub/xts-platkorm/xts-g
+ 3155  cd ~/GitHub/xts-platkorm/xts-gw
+ 3156  ls
+ 3157  cd src
+ 3158  ls
+ 3159  cd main/resources
+ 3160  ls
+ 3161  vi application.
+ 3162  vi application.properties
+ 3163  vi application.yml
+ 3164  cd ..
+ 3165  ls
+ 3166  cd java
+ 3167  ls
+ 3168  cd com/xteamstudio/xts
+ 3169  ls
+ 3170  cd gw
+ 3171  ls
+ 3172  cd java
+ 3173  ls
+ 3174  vi XtsGwApplication.java
+ 3175  cd filter
+ 3176  ls
+ 3177  cd ..
+ 3178  ls
+ 3179  vi config/XtsGwRootConfig.java
+ 3180  cd docker
+ 3181  ls
+ 3182  docker-compose up -d
+ 3183  cd ~
+ 3184  ls
+ 3185  cd ~
+ 3186  cd sample-chart
+ 3187  ls
+ 3188  cd templates
+ 3189  ls
+ 3190  vi configs.yaml
+ 3191  vi deployments.yaml
+ 3192  vi services.yaml
+ 3193  docker-compose stop
+ 3194  docker-compose rm -f
+ 3195  cd ..
+ 3196  sh run-local-build.sh
+ 3197  vi deployments.yaml
+ 3198  vi services.yaml
+ 3199  vi deployments.yaml
+ 3200  history
+ 3201  kubectl port-forward svc/mysql 3305:3306
+ 3202  ls
+ 3203  cd ..
+ 3204  helm upgrade sample .
+ 3205  ls
+ 3206  cd templates
+ 3207  ls
+ 3208  vi deployments.yaml
+ 3209  cd ..
+ 3210  helm upgrade sample .
+ 3211  vi deployments.yaml
+ 3212  vi templates/deployments.yaml
+ 3213  helm upgrade sample .
+ 3214  vi templates/deployments.yaml
+ 3215  helm upgrade sample .
+ 3216  vi templates/deployments.yaml
+ 3217  helm upgrade sample .
+ 3218  vi templates/deployments.yaml
+ 3219  helm upgrade sample .
+ 3220  vi templates/deployments.yaml
+ 3221  helm upgrade sample .
+ 3222  vi templates/deployments.yaml
+ 3223  helm upgrade sample .
+ 3224  ls
+ 3225  cd templates
+ 3226  ls
+ 3227  vi NOTES.txt
+ 3228  cd ..
+ 3229  clear
+ 3230  ls
+ 3231  vi gateway.yaml
+ 3232  kubectl apply -f gateway.yaml
+ 3233  vi gateway.yaml
+ 3234  sh run-local-build.sh
+ 3235  kubectl apply -f gateway.yaml
+ 3236  kubectl get VirtualService
+ 3237  kubectl get destinationrule
+ 3238  export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+ 3239  export INGRESS_HOST=$(minikube ip)
+ 3240  export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+ 3241  echo $GATEWAY_URL
+ 3242  vi gateway.yaml
+ 3243  export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].nodePort}')
+ 3244  export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+ 3245  echo $GATEWAY_URL
+ 3246  kubectl get destinationrule
+ 3247  vi gateway.yaml
+ 3248  kubectl get svc istio-ingressgateway -n istio-system
+ 3249  kubectl get gateway
+ 3250  vi templates/services.yaml
+ 3251  vi templates/deployments.yaml
+ 3252  kubectl get deployments
+ 3253  kubectl get pods
+ 3254  docker images
+ 3255  docker push jianminhuang/sample-gw:0.0.1
+ 3256  eval $(minikube docker-env)
+ 3257  ls
+ 3258  vi templates/deployments.yaml
+ 3259  helm upgrade sample .
+ 3260  kubectl get pods
+ 3261  helm delete --purge sample
+ 3262  helm install sample .
+ 3263  helm install --name=sample .
+ 3264  kubectl get pods
+ 3265  kubectl logs sample-api-k8s-v1-7989885b94-bpmm4
+ 3266  kubectl get pods
+ 3267  vi templates/deployments.yaml
+ 3268  helm upgrade sample .
+ 3269  kubectl get pods
+ 3270  kubectl describe
+ 3271  kubectl describe pod
+ 3272  helm delete --purge sample
+ 3273  minikube stop
+ 3274  minikube delete
+ 3275  minikube -h
+ 3276  minikube status
+ 3277  sysctl hw.physicalcpu hw.logicalcpu
+ 3278  minikube start --memory=8192 --cpus=8
+ 3279  minikube kubectl
+ 3280  history | grep redis
+ 3281  helm install --name redis stable/redis
+ 3282  kubectl get all --all-namespaces | grep tiller
+ 3283  helm init
+ 3284  kubectl create serviceaccount --namespace kube-system tiller
+ 3285  kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+ 3286  kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+ 3287  helm version
+ 3288  helm install --name redis stable/redis
+ 3289  helm install --name redis stable/mysql
+ 3290  helm install --name mysql stable/mysql
+ 3291  kubectl get secret --namespace default redis -o jsonpath="{.data.redis-password}" | base64 --decode
+ 3292  kubectl get secret --namespace default mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
+ 3293  docker push jianminhuang/sample-gw:0.0.1
+ 3294  sh run-local-build.sh
+ 3295  eval $(minikube docker-env)
+ 3296  minikube docker-env
+ 3297  eval $(minikube docker-env)
+ 3298  helm install --name=sample .
+ 3299  kubectl get pods
+ 3300  eval $(minikube docker-env)
+ 3301  kubectl get pods
+ 3302  vi templates/deployments.yaml
+ 3303  helm upgrade sample .
+ 3304  kubectl get pods
+ 3305  vi templates/deployments.yaml
+ 3306  eval $(minikube docker-env)
+ 3307  kubectl get pods
+ 3308  docker ps
+ 3309  kubectl get pods
+ 3310  helm delete --purge sample
+ 3311  helm install --name=sample .
+ 3312  kubectl get pods
+ 3313  version=0.1
+ 3314  version=0.0.1
+ 3315  docker push jianminhuang/sample-gw:$version
+ 3316  kubectl get pods
+ 3317  vi templates/deployments.yaml
+ 3318  helm upgrade sample .
+ 3319  kubectl get pods
+ 3320  vi templates/deployments.yaml
+ 3321  docker images
+ 3322  eval $(minikube docker-env)
+ 3323  docker images
+ 3324  helm delete --purge sample
+ 3325  minikube delete
+ 3326  minikube stop
+ 3327  minikube start --memory=8192 --cpus=8 --insecure-registry
+ 3328  vi templates/deployments.yaml
+ 3329  minikube start --memory=8192 --cpus=8
+ 3330  cd ..
+ 3331  ls
+ 3332  vi kuberegistry.yaml
+ 3333  mv kuberegistry.yaml kube-registry.yaml
+ 3334  kubectl create -f kube-registry.yaml
+ 3335  minikube ssh && curl localhost:5000
+ 3336  kubectl port-forward --namespace kube-system \ \n$(kubectl get po -n kube-system | grep kube-registry-v0 | \awk '{print $1;}') 5000:5000
+ 3337  kubectl port-forward --namespace kube-system $(kubectl get po -n kube-system | grep kube-registry-v0 | \awk '{print $1;}') 5000:5000
+ 3338  helm init
+ 3339  kubectl create serviceaccount --namespace kube-system tiller
+ 3340  kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+ 3341  kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+ 3342  helm version
+ 3343  sh run-local-build.sh
+ 3344  kubectl get pods
+ 3345  kubectl get pods -A
+ 3346  version=0.0.1
+ 3347  docker tag jcconf-2019-sample/sample-gw:0.0.1 jianminhuang/sample-gw:$version
+ 3348  docker push jianminhuang/sample-gw:$version
+ 3349  minikube stop
+ 3350  minikube delete
+ 3351  minikube start --memory=8192 --cpus=8
+ 3352  docker ps -a
+ 3353  docker images
+ 3354  minikube kubectl
+ 3355  sh run-local-build.sh
+ 3356  docker images
+ 3357  eval $(minikube docker-env)
+ 3358  docker images
+ 3359  helm init
+ 3360  kubectl create serviceaccount --namespace kube-system tiller
+ 3361  kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+ 3362  kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+ 3363  helm version
+ 3364  helm install --name mysql stable/mysql
+ 3365  helm install --name redsi stable/redis
+ 3366  helm install --name redis stable/redis
+ 3367  helm delete --purge redsi
+ 3368  kubectl get secret --namespace default redis -o jsonpath="{.data.redis-password}" | base64 --decode
+ 3369  kubectl get secret --namespace default mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
+ 3370  kubectl port-forward svc/mysql 3305:3306
+ 3371  sh run-local-build.sh
+ 3372  ls
+ 3373  rm kube-registry.yaml
+ 3374  cd sample-chart
+ 3375  ls
+ 3376  vi templates/deployments.yaml
+ 3377  docker images
+ 3378  istioctl manifest apply --set profile=demo
+ 3379  kubectl label namespace default istio-injection=enabled
+ 3380  helm install sample .
+ 3381  helm install --name=sample .
+ 3382  kubectl get pods
+ 3383  kubectl get pods -A
+ 3384  kubectl get svc
+ 3385  kubectl get pod
+ 3386  cd ..
+ 3387  kubectl apply -f gateway.yaml
+ 3388  kubectl get pod
+ 3389  ls
+ 3390  cd sample-chart
+ 3391  ls
+ 3392  vi templates/deployments.yaml
+ 3393  vi templates/configs.yaml
+ 3394  vi templates/services.yaml
+ 3395  kubectl get pod
+ 3396  kubectl logs sample-gw-k8s-v1-5f7c999d56-xjmpd
+ 3397  kubectl logs sample-gw-k8s-v1-5f7c999d56-xjmpd sample-gw
+ 3398  sh run-local-build.sh
+ 3399  ls
+ 3400  sh run-local-build.sh
+ 3401  kubectl get pod
+ 3402  helm delete --purge sample
+ 3403  helm install --name=sample .
+ 3404  kubectl get pod
+ 3405  kubectl logs sample-api-k8s-v1-575cc7b56-mkjqr 
+ 3406  kubectl logs sample-api-k8s-v1-575cc7b56-mkjqr sample-api
+ 3407  kubectl get pod
+ 3408  kubectl get svc
+ 3409  kubectl port-forward svc/sample-gw 8080:80
+ 3410  kubectl get gateway
+ 3411  kubectl get svc istio-ingressgateway -n istio-system
+ 3412  export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+ 3413  export INGRESS_HOST=$(minikube ip)
+ 3414  export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+ 3415  echo $GATEWAY_URL
+ 3416  istioctl manifest apply --set values.tracing.enabled=true
+ 3417  istioctl dashboard jaeger
+ 3418  istioctl manifest apply \\n    --set values.kiali.enabled=true \\n    --set values.grafana.enabled=true \\n    --set values.tracing.enabled=true \\n    --set "values.kiali.dashboard.jaegerURL=http://jaeger-query:63399" \\n    --set "values.kiali.dashboard.grafanaURL=http://grafana:3000"
+ 3419  kubectl -n istio-system get svc kiali
+ 3420  istioctl dashboard kiali
+ 3421  istioctl dashboard jaeger
+ 3422  sh run-local-build.sh
+ 3423  ls
+ 3424  vi templates/deployments.yaml
+ 3425  helm upgrade sample .
+ 3426  cd ..
+ 3427  ls
+ 3428  vi gateway.yaml
+ 3429  kubectl apply -f gateway.yaml
+ 3430  vi gateway.yaml
+ 3431  kubectl apply -f gateway.yaml
+ 3432  vi gateway.yaml
+ 3433  kubectl apply -f gateway.yaml
+ 3434  vi gateway.yaml
+ 3435  kubectl apply -f gateway.yaml
+ 3436  vi gateway.yaml
+ 3437  kubectl apply -f gateway.yaml
+ 3438  vi gateway.yaml
+ 3439  kubectl apply -f gateway.yaml
+ 3440  vi gateway.yaml
+ 3441  kubectl apply -f gateway.yaml
+ 3442  vi gateway.yaml
+ 3443  kubectl apply -f gateway.yaml
+ 3444  vi gateway.yaml
+ 3445  kubectl apply -f gateway.yaml
+ 3446  vi gateway.yaml
+ 3447  kubectl apply -f gateway.yaml
+ 3448  vi gateway.yaml
+ 3449  kubectl apply -f gateway.yaml
+ 3450  vi gateway.yaml
+ 3451  kubectl apply -f gateway.yaml
+ 3452  vi gateway.yaml
+ 3453  kubectl apply -f gateway.yaml
+ 3454  vi gateway.yaml
+ 3455  cd sample-chart
+ 3456  vi templates/deployments.yaml
+ 3457  kubectl get pod
+ 3458  vi templates/services.yaml
+ 3459  vi templates/deployments.yaml
+ 3460  vi ../gateway.yaml
+ 3461  cd ..
+ 3462  kubectl apply -f gateway.yaml
+ 3463  cd ..
+ 3464  cd yfr
+ 3465  ls
+ 3466  vi gateway.yaml
+ 3467  kubectl apply -f gateway.yaml
+ 3468  istioctl manifest apply \\n    --set values.kiali.enabled=true \\n    --set values.grafana.enabled=true \\n    --set values.tracing.enabled=true \\n    --set "values.kiali.dashboard.jaegerURL=http://jaeger-query:63399" \\n    --set "values.kiali.dashboard.grafanaURL=http://grafana:3000"
+ 3469  istioctl dashboard kiali
+ 3470  istioctl manifest apply --set values.tracing.enabled=true
+ 3471  istioctl dashboard jaeger
+ 3472  curl http://192.168.64.5:31247/item\?code\=0000
+ 3473  while true; do\ncurl http://192.168.64.5:31247/item\?code\=0000\nsleep 1\ndone
+ 3474  istioctl manifest apply --set values.tracing.enabled=true
+ 3475  istioctl dashboard jaeger
+ 3476  kubectl get pods -n istio-system
+ 3477  cd sample-chart
+ 3478  ls
+ 3479  cd templates
+ 3480  ls
+ 3481  vi services.yaml
+ 3482  cd ..
+ 3483  helm upgrade sample .
+ 3484  kubectl get svc
+ 3485  istioctl manifest apply --set values.tracing.enabled=true
+ 3486  istioctl dashboard jaeger
+ 3487  minikube stop
+ 3488  minikube delete
+ 3489  clear
+ 3490  vim temp.txt
+ 3491  git push
+ 3492  history > history_500.txt
+ 3493  vi history_500.txt
+ 3494  history | tail -n 10
+ 3495  history | tail -n 300 > history_300.txt
+ 3496  rm history_500.txt
+ 3497  vi history_300.txt
+ 3498  rm history_300.txt
+ 3499  history | tail -n 500 > history.txt
+ 3500  vi history.txt

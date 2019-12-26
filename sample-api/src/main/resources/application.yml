@@ -13,8 +13,8 @@ spring:
   profiles: k8s
   redis:
     host: redis
-    password: IdxTCbD3bL%
+    password: A8xOL6Dmmh%
   datasource:
     url: jdbc:mysql://mysql:3306/test?useSSL=false
     username: root
-    password: 6wqMG01XK1
+    password: upygdpBtC2
